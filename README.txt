@@ -1,197 +1,57 @@
-<div align="center">
-
-🌧️ Baarish Wali Shaam
-🎵 A Minimal Rainy Music Player
-
-A beautiful responsive music player designed around a rainy evening theme, featuring a transparent bottom player, rotating record animation, smooth audio seeking, and automatic song loading from the songs folder.
-
-<p> <img src="https://img.shields.io/badge/Platform-Web-blue?style=for-the-badge"> <img src="https://img.shields.io/badge/Language-HTML%20%7C%20CSS%20%7C%20JavaScript-orange?style=for-the-badge"> <img src="https://img.shields.io/badge/Backend-Python-yellow?style=for-the-badge"> <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge"> </p>
-
-🌐 https://baarishwalishaam.onrender.com/ ▶ Live Demo
-
-</div>
-
-✨ Features
-
-🎵 Music Player
-
-Play / Pause
-Previous / Next
-Smooth seek bar
-Live playback time
-Automatic track duration
-Automatic song list
-
-💿 Rotating Record
-
-Circular vinyl-style player
-Smooth rotation while playing
-Baarish Wali Shaam title integrated into the design
-Transparent glass-style player
-
-🌧️ Rainy Experience
-
-Full-screen rainy background
-Responsive layout
-Atmospheric evening design
-Bottom-positioned player
-
-📱 Responsive
-
-Desktop friendly
-Mobile friendly
-Responsive controls
-Adapts to different screen sizes
-
-⚡ Audio Seeking
-
-HTTP Range support
-Smooth forward/backward seeking
-Works with large audio files more reliably
-🎮 Controls
-Action	Control
-Play / Pause	▶️
-Previous Song	⏮
-Next Song	⏭
-Seek	Progress Bar
-Select Song	Playlist
-Volume	Browser Audio Controls
-📂 Project Structure
-Baarish-Wali-Shaam/
-│
-├── index.html              # Music Player UI
-├── server.py               # Python Music Server
-│
-└── songs/
-    ├── song1.mp3
-    ├── song2.mp3
-    ├── song3.mp3
-    └── ...
-🛠 Customization
-Want to Change?	Edit
-🌧 Background	index.html
-🎵 Player Design	index.html
-💿 Record Size	index.html
-✨ Record Animation	index.html
-🎨 Colors	index.html
-🎶 Songs	songs/
-⚡ Server Port	server.py
-🚀 Getting Started
-Clone
-git clone https://github.com/YOUR_USERNAME/baarish-wali-shaam.git
-
-Open the folder:
-
-cd baarish-wali-shaam
-Run Locally
-
-Make sure Python is installed.
-
-Run:
-
-python server.py
-
-Open:
-
-http://localhost:8000
-
-
-
-
-📈 Performance
-
-✅ Lightweight frontend
-
-✅ No Node.js required
-
-✅ No npm required
-
-✅ Python standard library server
-
-✅ Responsive design
-
-✅ HTTP Range audio seeking
-
-✅ Suitable for static-style music UI
-
-🩹 Troubleshooting
-
-<details>
-
-<summary><b>🎵 Songs are not appearing</b></summary>
-
-Make sure your files are inside:
-
-songs/
-
-Then refresh the page.
-
-</details>
-
-<details>
-
-<summary><b>⏩ Seek bar is not working</b></summary>
-
-Make sure you're using the included server.py.
-
-The server provides HTTP Range support for audio seeking.
-
-</details>
-
-<details>
-
-<summary><b>🌐 Render deployment fails</b></summary>
-
-Use:
-
-Build Command:
-echo "No dependencies"
-
-and:
-
-Start Command:
-python server.py
-
-Also make sure server.py listens on 0.0.0.0 and uses the Render PORT.
-
-</details>
-
-<details>
-
-<summary><b>📱 Player looks different on mobile</b></summary>
-
-The player is responsive and automatically adjusts its size and spacing for smaller screens.
-
-</details>
-
-💻 Built With
-🎨 HTML5
-🎯 CSS3
-⚡ JavaScript
-🐍 Python
-🌐 HTTP Server
-🎵 HTML5 Audio
-⭐ Future Ideas
-🌧️ Animated rain intensity
-🎨 Multiple themes
-💿 Different record designs
-❤️ Favorite songs
-🔀 Shuffle mode
-🔁 Repeat mode
-🔊 Volume control
-🎵 Album artwork
-🌙 Day/Night themes
-📱 Improved mobile controls
-☁️ Cloud music storage
-
-<div align="center">
-
-🌧️ Enjoy the Rain
-
-Give the project a ⭐ on GitHub!
-
-Made with ❤️ for rainy evenings.
-
-बारिश वाली शाम ☔🎵
-
-</div>
+# Barsaat Chai — Rainy Lake Music Player
+
+A single HTML file: a music player styled like an old brass radio, sitting over a
+rainy lakeside chai-stall photo. Vinyl disc spins while a track plays, live clock
+top-left, playlist you scroll through.
+
+![Preview](preview.jpg)
+
+## File
+- `rainy-chai-player.html` — the whole thing (HTML, CSS, JS, and the background
+  photo) is bundled into one file. Nothing to install, no build step.
+
+## How to open it
+Just double-click it, or open from a terminal:
+```
+open rainy-chai-player.html      # macOS
+start rainy-chai-player.html     # Windows
+xdg-open rainy-chai-player.html  # Linux
+```
+
+## Live link
+I can't deploy or host this myself from here, so I don't have a real URL to hand
+you — but since it's a single static file, you can get one yourself in under a
+minute:
+
+- **[Netlify Drop](https://app.netlify.com/drop)** — drag `rainy-chai-player.html`
+  onto the page, get a `https://...netlify.app` link instantly. No account needed.
+- **GitHub Pages** — put the file in a repo as `index.html`, turn on Pages in
+  Settings, live at `https://<username>.github.io/<repo>/`.
+- **Vercel** — `vercel` CLI or drag-and-drop import, gives a `https://...vercel.app`
+  link.
+
+## What works
+- Clock (top-left) — real time, 12-hour format with AM/PM, updates every second
+- Player — spinning disc while playing, stops cleanly when paused
+- Playlist — 50 song titles, scrollable
+- Seek bar, previous/next, one combined play/pause button
+- Rain animation over the photo
+- Layout adjusts to smaller screens without things overlapping
+
+## Features
+- **Background** — your uploaded chai-stall/lake photo, embedded directly in the
+  file (as base64), with rain streaks and a soft vignette over it
+- **Clock** — glass pill, top-left, live 12-hour clock with AM/PM and date
+- **Player** — elliptical brass bezel, circular vinyl disc that spins only while
+  playing, needle arm that lifts/lowers with play state
+- **Transport** — previous / play-pause / next, plus a seek bar showing current
+  time and total duration
+- **Playlist** — scrollable list of 50 song titles (no dates), each row shows a
+  time value once a real track is loaded
+- **Responsive** — clock and player panel no longer overlap; sizes scale down for
+  narrow or short viewports; playlist and panel scroll instead of clipping
+
+## What doesn't
+No actual audio is attached — there were no song files to embed, and I can't fetch
+copyrighted music. The playlist is a shell: titles are there, but nothing plays
+until real audio files are wired in.
